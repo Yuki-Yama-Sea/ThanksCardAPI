@@ -24,7 +24,12 @@ namespace TomoyoseStore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
-            return await _context.Employees.ToListAsync();
+            // Include を指定することで Section (Section) を同時に取得する。
+            return await _context.Employees
+                                    .Include(Employee => Employee.Section)
+                                    .ToListAsync();
+            //return await _context.Users.ToListAsync();
+
         }
 
         // GET: api/Employees/5

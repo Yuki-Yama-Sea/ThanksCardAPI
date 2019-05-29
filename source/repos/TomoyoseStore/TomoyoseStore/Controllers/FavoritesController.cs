@@ -24,7 +24,12 @@ namespace TomoyoseStore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Favorite>>> GetFavorites()
         {
-            return await _context.Favorites.ToListAsync();
+            // Include を指定することで Employee, Card (Employee, Card) を同時に取得する。
+            return await _context.Favorites
+                                    .Include(Favorite => Favorite.Employee)
+                                    .Include(Favorite => Favorite.Card)
+                                    .ToListAsync();
+            //return await _context.Users.ToListAsync();
         }
 
         // GET: api/Favorites/5

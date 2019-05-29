@@ -24,7 +24,12 @@ namespace TomoyoseStore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Card>>> GetCards()
         {
-            return await _context.Cards.ToListAsync();
+            // Include を指定することで From, To (Userモデル) を同時に取得する。
+            return await _context.Cards
+                                    .Include(Card => Card.From)
+                                    .Include(Card => Card.To)
+                                    .ToListAsync();
+            //return await _context.Users.ToListAsync();
         }
 
         // GET: api/Cards/5
