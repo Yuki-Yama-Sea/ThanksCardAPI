@@ -22,7 +22,7 @@ namespace TomoyoseStore.Controllers
 
         //PUT api/どういたしまして判定
         [HttpPut("{id}")]
-        public async Task<IActionResult> Reply(long id, Card card)
+        public async Task<IActionResult> Reply(int id, Card card)
         {
             if (id != card.Id)
             {
