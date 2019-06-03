@@ -11,15 +11,17 @@ namespace TomoyoseStore.Models
         public int CD { get; set; }
         public string Text { get; set; }
         public DateTime Date { get; set; }
-        public virtual Employee From { get; set; }
-        public virtual Employee To { get; set; }
         public string Title { get; set; }
         public int Reply { get; set; }
         public int Favorite { get; set; }
         public int PickUp { get; set; }
 
 
-        // 多対1: User エンティティは1つの Department エンティティに属する
-        //public virtual Department Department { get; set; }
+        // 多対1: Card エンティティは1つの Employee エンティティに属する
+        public int FromId { get; set; }
+        public virtual Employee From { get; set; }
+        // 多対1: Card エンティティは1つの Employee エンティティに属する
+        public int ToId { get; set; }
+        public virtual Employee To { get; set; }
     }
 }

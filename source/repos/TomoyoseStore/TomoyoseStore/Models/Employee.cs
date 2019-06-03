@@ -12,7 +12,9 @@ namespace TomoyoseStore.Models
         public string Name { get; set; }
         public string Password { get; set; }
         public string Mailaddress { get; set; }
+
+        // 多対1: Employee エンティティは1つの Section エンティティに属する
+        public int SectionId { get; set; }
         public virtual Section Section { get; set; }
-        //public bool IsAdmin { get; set; }
     }
 }
