@@ -7,8 +7,8 @@ namespace TomoyoseStore.Models
 {
     public class Favorite
     {
+        public int Id { get; set; }
         public virtual Employee Employee { get; set; }
         public virtual Card Card { get; set; }
-        public int Id { get; set; }
     }
 }

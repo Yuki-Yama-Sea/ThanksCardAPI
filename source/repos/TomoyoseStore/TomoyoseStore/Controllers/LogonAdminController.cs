@@ -23,7 +23,7 @@ namespace TomoyoseStore.Controllers
         [HttpPost]
         public ActionResult<Employee> Post([FromBody] Employee employee)
         {
-            var authorizedUser = _context.Employees.SingleOrDefault(x => x.Name == employee.Mailaddress && x.Password == employee.Password && employee.Id==1);
+            var authorizedUser = _context.Employees.SingleOrDefault(x => x.Mailaddress == employee.Mailaddress && x.Password == employee.Password && x.Id == 1);
             if (authorizedUser == null)
             {
                 return NotFound();
