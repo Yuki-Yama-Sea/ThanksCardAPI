@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TomoyoseStore.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace TomoyoseStore.Controllers
 {
@@ -24,12 +26,16 @@ namespace TomoyoseStore.Controllers
         [HttpPost]
         public ActionResult<Employee> Post([FromBody] Employee employee)
         {
-            var authorizedUser = _context.Employees.SingleOrDefault(x => x.Mailaddress == employee.Mailaddress && x.Password == employee.Password);
+            var authorizedUser = _context.Employees
+                                    .Include(Employee => Employee.Section)
+                                     .ThenInclude(Section => Section.Department)
+                                      .SingleOrDefault(x => x.Mailaddress == employee.Mailaddress && x.Password == employee.Password); 
             if (authorizedUser == null)
             {
                 return NotFound();
             }
             return authorizedUser;
+                        
         }
 
     }

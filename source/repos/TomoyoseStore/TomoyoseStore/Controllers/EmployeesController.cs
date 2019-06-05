@@ -27,7 +27,8 @@ namespace TomoyoseStore.Controllers
             // Include を指定することで Section (Section) を同時に取得する。
             return await _context.Employees
                                     .Include(Employee => Employee.Section)
-                                    .ToListAsync();
+                                     .ThenInclude(Section => Section.Department)
+                                     .ToListAsync();
             //return await _context.Users.ToListAsync();
 
         }
