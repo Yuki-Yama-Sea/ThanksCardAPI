@@ -28,19 +28,19 @@ namespace TomoyoseStore.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<int>("Favorite");
+                    b.Property<bool>("Favorite");
 
-                    b.Property<int?>("FromId");
+                    b.Property<int>("FromId");
 
-                    b.Property<int>("PickUp");
+                    b.Property<bool>("PickUp");
 
-                    b.Property<int>("Reply");
+                    b.Property<bool>("Reply");
 
                     b.Property<string>("Text");
 
                     b.Property<string>("Title");
 
-                    b.Property<int?>("ToId");
+                    b.Property<int>("ToId");
 
                     b.HasKey("Id");
 
@@ -78,7 +78,7 @@ namespace TomoyoseStore.Migrations
 
                     b.Property<string>("Password");
 
-                    b.Property<int?>("SectionId");
+                    b.Property<int>("SectionId");
 
                     b.HasKey("Id");
 
@@ -92,9 +92,9 @@ namespace TomoyoseStore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("CardId");
+                    b.Property<int>("CardId");
 
-                    b.Property<int?>("EmployeeId");
+                    b.Property<int>("EmployeeId");
 
                     b.HasKey("Id");
 
@@ -112,7 +112,7 @@ namespace TomoyoseStore.Migrations
 
                     b.Property<int>("CD");
 
-                    b.Property<int?>("DepartmentId");
+                    b.Property<int>("DepartmentId");
 
                     b.Property<string>("Name");
 
@@ -127,36 +127,42 @@ namespace TomoyoseStore.Migrations
                 {
                     b.HasOne("TomoyoseStore.Models.Employee", "From")
                         .WithMany()
-                        .HasForeignKey("FromId");
+                        .HasForeignKey("FromId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("TomoyoseStore.Models.Employee", "To")
                         .WithMany()
-                        .HasForeignKey("ToId");
+                        .HasForeignKey("ToId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("TomoyoseStore.Models.Employee", b =>
                 {
                     b.HasOne("TomoyoseStore.Models.Section", "Section")
                         .WithMany()
-                        .HasForeignKey("SectionId");
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("TomoyoseStore.Models.Favorite", b =>
                 {
                     b.HasOne("TomoyoseStore.Models.Card", "Card")
                         .WithMany()
-                        .HasForeignKey("CardId");
+                        .HasForeignKey("CardId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("TomoyoseStore.Models.Employee", "Employee")
                         .WithMany()
-                        .HasForeignKey("EmployeeId");
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("TomoyoseStore.Models.Section", b =>
                 {
                     b.HasOne("TomoyoseStore.Models.Department", "Department")
                         .WithMany()
-                        .HasForeignKey("DepartmentId");
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
