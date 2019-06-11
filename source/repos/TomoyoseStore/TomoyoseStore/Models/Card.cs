@@ -12,9 +12,9 @@ namespace TomoyoseStore.Models
         public string Text { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; }
-        public int Reply { get; set; }
-        public int Favorite { get; set; }
-        public int PickUp { get; set; }
+        public bool Reply { get; set; }
+        public bool Favorite { get; set; }
+        public bool PickUp { get; set; }
 
 
         // 多対1: Card エンティティは1つの Employee エンティティに属する

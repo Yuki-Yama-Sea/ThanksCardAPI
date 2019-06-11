@@ -27,8 +27,12 @@ namespace TomoyoseStore.Controllers
             // Include を指定することで From, To (Userモデル) を同時に取得する。
             return await _context.Cards
                                     .Include(Card => Card.From)
+                                     .ThenInclude(From => From.Section)
+                                      .ThenInclude(Section => Section.Department)
                                     .Include(Card => Card.To)
-                                    .ToListAsync();
+                                     .ThenInclude(To => To.Section)
+                                      .ThenInclude(Section => Section.Department)
+                                      .ToListAsync();
             //return await _context.Users.ToListAsync();
         }
 
@@ -78,12 +82,12 @@ namespace TomoyoseStore.Controllers
 
         // POST: api/Cards
         [HttpPost]
-        public async Task<ActionResult<Card>> PostCard(Card card)
+        public async Task<ActionResult<Card>> PostCard([FromBody]Card card)
         {
             _context.Cards.Add(card);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCard", new { id = card.Id }, card);
+            return　card;
         }
 
         // DELETE: api/Cards/5
