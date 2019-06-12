@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TomoyoseStore.Models;
@@ -9,9 +10,10 @@ using TomoyoseStore.Models;
 namespace TomoyoseStore.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20190612010306_Addtomoyose")]
+    partial class Addtomoyose
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,22 +105,6 @@ namespace TomoyoseStore.Migrations
                     b.HasIndex("EmployeeId");
 
                     b.ToTable("Favorites");
-                });
-
-            modelBuilder.Entity("TomoyoseStore.Models.Ranking", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Count");
-
-                    b.Property<string>("Name");
-
-                    b.Property<int>("Rank");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rankings");
                 });
 
             modelBuilder.Entity("TomoyoseStore.Models.Section", b =>

@@ -1,0 +1,14 @@
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\bin\Debug\netcoreapp2.2\TomoyoseStore.deps.json
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\bin\Debug\netcoreapp2.2\TomoyoseStore.runtimeconfig.json
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\bin\Debug\netcoreapp2.2\TomoyoseStore.runtimeconfig.dev.json
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\bin\Debug\netcoreapp2.2\TomoyoseStore.dll
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\bin\Debug\netcoreapp2.2\TomoyoseStore.pdb
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.csprojAssemblyReference.cache
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.csproj.CoreCompileInputs.cache
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.RazorAssemblyInfo.cache
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.RazorAssemblyInfo.cs
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.AssemblyInfoInputs.cache
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.AssemblyInfo.cs
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.RazorTargetAssemblyInfo.cache
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.dll
+C:\Users\yamauchi_y\Source\Repos\ThanksCardAPI\source\repos\TomoyoseStore\TomoyoseStore\obj\Debug\netcoreapp2.2\TomoyoseStore.pdb

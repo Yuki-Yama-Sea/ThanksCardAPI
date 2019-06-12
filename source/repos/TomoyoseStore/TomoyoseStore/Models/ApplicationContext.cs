@@ -18,6 +18,6 @@ namespace TomoyoseStore.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<Section> Sections { get; set; }
-
+        public DbSet<Ranking> Rankings { get; set; }
     }
 }
