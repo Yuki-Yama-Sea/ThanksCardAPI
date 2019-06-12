@@ -13121,23 +13121,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yamauchi_y\\.nuget\\packages\\": {},
+    "C:\\Users\\arakaki1048\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yamauchi_y\\Source\\Repos\\ThanksCardAPI\\source\\repos\\TomoyoseStore\\TomoyoseStore\\TomoyoseStore.csproj",
+      "projectUniqueName": "C:\\Users\\arakaki1048\\Source\\Repos\\ThanksCardAPI5\\source\\repos\\TomoyoseStore\\TomoyoseStore\\TomoyoseStore.csproj",
       "projectName": "TomoyoseStore",
-      "projectPath": "C:\\Users\\yamauchi_y\\Source\\Repos\\ThanksCardAPI\\source\\repos\\TomoyoseStore\\TomoyoseStore\\TomoyoseStore.csproj",
-      "packagesPath": "C:\\Users\\yamauchi_y\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yamauchi_y\\Source\\Repos\\ThanksCardAPI\\source\\repos\\TomoyoseStore\\TomoyoseStore\\obj\\",
+      "projectPath": "C:\\Users\\arakaki1048\\Source\\Repos\\ThanksCardAPI5\\source\\repos\\TomoyoseStore\\TomoyoseStore\\TomoyoseStore.csproj",
+      "packagesPath": "C:\\Users\\arakaki1048\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\arakaki1048\\Source\\Repos\\ThanksCardAPI5\\source\\repos\\TomoyoseStore\\TomoyoseStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\yamauchi_y\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\arakaki1048\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

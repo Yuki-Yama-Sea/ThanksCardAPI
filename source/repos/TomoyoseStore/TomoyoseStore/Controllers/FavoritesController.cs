@@ -27,7 +27,18 @@ namespace TomoyoseStore.Controllers
             // Include を指定することで Employee, Card (Employee, Card) を同時に取得する。
             return await _context.Favorites
                                     .Include(Favorite => Favorite.Employee)
+                                     .ThenInclude(Employee=>Employee.Section)
+                                      .ThenInclude(Section=>Section.Department)
                                     .Include(Favorite => Favorite.Card)
+                                     .ThenInclude(Card=>Card.From)
+                                      .ThenInclude(From=>From.Section)
+                                       .ThenInclude(Section=>Section.Department)
+                                    .Include(Favorite=>Favorite.Card)
+                                      .ThenInclude(Card => Card.From)
+                                      .ThenInclude(To => To.Section)
+                                       .ThenInclude(Section => Section.Department)
+
+
                                     .ToListAsync();
             //return await _context.Users.ToListAsync();
         }
