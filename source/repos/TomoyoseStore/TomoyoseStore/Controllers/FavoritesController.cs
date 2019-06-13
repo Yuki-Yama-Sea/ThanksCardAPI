@@ -34,9 +34,9 @@ namespace TomoyoseStore.Controllers
                                       .ThenInclude(From=>From.Section)
                                        .ThenInclude(Section=>Section.Department)
                                     .Include(Favorite=>Favorite.Card)
-                                      .ThenInclude(Card => Card.From)
-                                      .ThenInclude(To => To.Section)
-                                       .ThenInclude(Section => Section.Department)
+                                      .ThenInclude(Card => Card.To)
+                                       .ThenInclude(To => To.Section)
+                                        .ThenInclude(Section => Section.Department)
 
 
                                     .ToListAsync();
